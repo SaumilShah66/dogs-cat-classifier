@@ -10,7 +10,7 @@ import pickle
 def create_data():
 	image_size = 50
 	length = image_size*image_size
-	os.chdir('dogscats/train/dogs')
+	os.chdir('../dogscats/train/dogs')
 	pics_of_dogs = glob.glob('*.jpg')
 	os.chdir('../cats')
 	pics_of_cats = glob.glob('*.jpg')
@@ -34,7 +34,7 @@ def create_data():
 		main_data[i,0:length] = np.reshape(img,(1,length))
 		main_data[i,length+1] = 1
 		i = i+1
-	os.chdir('../../..')
+	os.chdir('../../../dogs-cat-classifier')
 	np.random.shuffle(main_data)
 	print("saving data set")
 	pickle.dump(main_data,open('main_data.p','w'))
@@ -43,7 +43,7 @@ def create_data():
 def test_data():
 	image_size = 50
 	length = image_size*image_size
-	os.chdir('dogscats/valid/dogs')
+	os.chdir('../dogscats/valid/dogs')
 	pics_of_dogs = glob.glob('*.jpg')
 	os.chdir('../cats')
 	pics_of_cats = glob.glob('*.jpg')
@@ -67,7 +67,7 @@ def test_data():
 		test_data[i,0:length] = np.reshape(img,(1,length))
 		test_data[i,length+1] = 1
 		i = i+1
-	os.chdir('../../..')
+	os.chdir('../../../dogs-cat-classifier')
 	np.random.shuffle(test_data)
 	print("Saving testing data set")
 	pickle.dump(test_data,open('test_data.p','w'))	

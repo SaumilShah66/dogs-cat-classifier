@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/pro_launda5/dogs-cat-classifier/my_cnn.tflearn"
+all_model_checkpoint_paths: "/home/pro_launda5/dogs-cat-classifier/my_cnn.tflearn"

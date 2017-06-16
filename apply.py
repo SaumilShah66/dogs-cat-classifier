@@ -7,7 +7,7 @@ from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.estimator import regression
 import cv2
 
-image_name = '/cats/cat.11737.jpg'
+image_name = 'cats/cat.11737.jpg'
 network = input_data(shape=[None, 50, 50, 1])
 
 network = conv_2d(network, 30, 3, activation='relu')
@@ -53,9 +53,4 @@ print('Making prediction')
 img = np.reshape(img,(-1,50,50,1))
 predict = model.predict(img)
 
-if predict[0]>0.5:
-  print("It's a Dog")
-elif predict[1]>0.5:
-  print("It's a Cat")
-else:
-  print("I cannot define it")
+print(predict)
