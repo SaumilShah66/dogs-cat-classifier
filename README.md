@@ -43,4 +43,4 @@ All of these files are required to use this trained model on any other machine. 
 ~$ sudo pip install -I tensorflow==1.0
 ~$ sudo pip install -I tflearn==0.3.1
 ```
-Now you can use apply.py script to use your model for new datas.
+Now you can use apply.py script to use your model for new data.
