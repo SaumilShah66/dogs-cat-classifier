@@ -1,6 +1,11 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
  ---
+
 # dogs-cat-classifier
+
+## Project contributors
+1) [Saumil Shah](https://github.com/SaumilShah66)
+
 
 Require dependencies are,
 * numpy
